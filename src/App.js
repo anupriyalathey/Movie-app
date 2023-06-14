@@ -1,6 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.css';
+
+// import "bootstrap/dist/css/bootstrap.min.css";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import SearchBox from "./components/SearchBox";
@@ -33,7 +35,7 @@ function App() {
         <MovieListHeading heading="Movies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
-      <div className="row">
+      <div className="row"> 
         <MovieList movies={movies} />
       </div>
     </div>
