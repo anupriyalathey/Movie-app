@@ -1,11 +1,12 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import SearchBox from "./components/SearchBox";
+import AddFavourites from "./components/AddFavourites";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -35,8 +36,8 @@ function App() {
         <MovieListHeading heading="Movies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
-      <div className="row"> 
-        <MovieList movies={movies} />
+      <div className="row">
+        <MovieList movies={movies} favouriteComponent={AddFavourites} />
       </div>
     </div>
   );

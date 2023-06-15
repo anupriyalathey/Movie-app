@@ -1,11 +1,36 @@
 .list {
     display: flex;
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+    /* flex-wrap: nowrap; */
 }
 
 .poster {
     margin-right: 20px;
-    /* width: 200px;
-    height: 300px */
+    position: relative;
+    transition: transform 0.2s;
+    /* width: 200px; */
+    /* height: 400px */
+}
+
+.poster:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.poster:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px;
 }
