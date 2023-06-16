@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "jsx": "react",
+        "skipLibCheck": true,
+        "target": "es5",
+        "lib": [
+            "DOM"
+        ]
+    }
+}
