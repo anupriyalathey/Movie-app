@@ -1,8 +1,9 @@
 import React from "react";
+import "./AddFavourites.css";
 function AddFavourites() {
   return (
     <>
-      <div>Add to favourites </div>
+      <div className="favourites">Add to favourites ❤</div>
     </>
   );
 }

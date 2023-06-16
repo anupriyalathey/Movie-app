@@ -1,8 +1,5 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-
-// import "bootstrap/dist/css/bootstrap.min.css";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import SearchBox from "./components/SearchBox";

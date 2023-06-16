@@ -7,8 +7,9 @@ function MovieList(props) {
       {props.movies.map((movie, index) => (
         <div className="poster">
           <img src={movie.Poster} alt="movie poster"></img>
-          <div className="overlay"></div>
-          <FavouriteComponent />
+          <div className="overlay">         
+            <FavouriteComponent />
+          </div>
         </div>
       ))}
     </div>

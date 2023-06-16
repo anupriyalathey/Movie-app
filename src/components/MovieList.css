@@ -1,16 +1,11 @@
 .list {
     display: flex;
-    /* overflow-x: auto;
-    overflow-y: hidden; */
-    /* flex-wrap: nowrap; */
 }
 
 .poster {
     margin-right: 20px;
     position: relative;
     transition: transform 0.2s;
-    /* width: 200px; */
-    /* height: 400px */
 }
 
 .poster:hover {
@@ -33,4 +28,5 @@
     bottom: 0;
     font-size: 20px;
     padding: 20px;
+    text-align: center;
 }
