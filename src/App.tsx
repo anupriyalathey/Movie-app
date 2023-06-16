@@ -11,7 +11,7 @@ import RemoveFavourites from "./components/RemoveFavourites";
 import { Movie } from "../types";
 
 function App() {
-  const [movies, setMovies] = useState<Movie[]>([]); //
+  const [movies, setMovies] = useState<Movie[]>([]); //<Movie[]> : used for useState's type definition like template in C
   const [searchValue, setSearchValue] = useState(""); // empty string to start with
   const [favourites, setFavourites] = useState<Movie[]>([]);
 
@@ -34,9 +34,24 @@ function App() {
     getMovieRequest(searchValue);
   }, [searchValue]); // when searchValue changes getMovieRequest() is called
 
+  useEffect(() => {
+    const movieFavourites = JSON.parse(
+      localStorage.getItem('app-favourites')
+    );
+    if (movieFavourites) {
+			setFavourites(movieFavourites);
+		}
+  },[]);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('app-favourites', JSON.stringify(items)); //setItem(keyName, keyValue)
+  };
+
   const addFavouriteMovie = (movie: Movie) => {
     const newFavouriteList = [...favourites, movie];
     setFavourites(newFavouriteList);
+    saveToLocalStorage(newFavouriteList);
+
   }
 
   const removeFavouriteMovie = (movie: Movie) => {
