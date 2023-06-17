@@ -35,7 +35,7 @@ function App() {
   }, [searchValue]); // when searchValue changes getMovieRequest() is called
 
   useEffect(() => {
-    const movieFavourites = JSON.parse(
+    const movieFavourites = JSON.parse( 
       localStorage.getItem('app-favourites')
     );
     if (movieFavourites) {
